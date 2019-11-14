@@ -1,0 +1,26 @@
+# == Schema Information
+#
+# Table name: animals
+#
+#  id          :bigint           not null, primary key
+#  name        :string
+#  mensal_cost :float
+#  animal_type :string
+#  owner_id    :bigint
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  mensal_cost: 1.5
+  animal_type: MyString
+  owner: one
+
+two:
+  name: MyString
+  mensal_cost: 1.5
+  animal_type: MyString
+  owner: two

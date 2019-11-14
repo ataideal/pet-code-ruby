@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/ctran/annotate_models.git
+  revision: 111640d077836ced23cfffb882c93e40968ab9d9
+  specs:
+    annotate (2.7.5)
+      activerecord (>= 3.2, < 7.0)
+      rake (>= 10.4, < 13.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -24,6 +32,11 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_model_serializers (0.10.10)
+      actionpack (>= 4.1, < 6.1)
+      activemodel (>= 4.1, < 6.1)
+      case_transform (>= 0.2)
+      jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
     activejob (5.2.3)
       activesupport (= 5.2.3)
       globalid (>= 0.3.6)
@@ -43,18 +56,28 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
     arel (9.0.0)
+    awesome_print (1.8.0)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (11.0.1)
+    case_transform (0.2)
+      activesupport
+    choice (0.2.0)
+    coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
+    erd (0.6.3)
+      nokogiri
+      rails-erd (>= 0.4.5)
     erubi (1.9.0)
     ffi (1.11.2)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
+    interception (0.5)
+    jsonapi-renderer (0.2.2)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -76,6 +99,14 @@ GEM
     nokogiri (1.10.5)
       mini_portile2 (~> 2.4.0)
     pg (1.1.4)
+    pry (0.12.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
+    pry-rescue (1.5.0)
+      interception (>= 0.5)
+      pry (>= 0.12.0)
     puma (3.12.1)
     rack (2.0.7)
     rack-test (1.1.0)
@@ -96,18 +127,27 @@ GEM
     rails-dom-testing (2.0.3)
       activesupport (>= 4.2.0)
       nokogiri (>= 1.6)
+    rails-erd (1.6.0)
+      activerecord (>= 4.2)
+      activesupport (>= 4.2)
+      choice (~> 0.2.0)
+      ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.3.0)
       loofah (~> 2.3)
+    rails-i18n (5.1.3)
+      i18n (>= 0.7, < 2)
+      railties (>= 5.0, < 6)
     railties (5.2.3)
       actionpack (= 5.2.3)
       activesupport (= 5.2.3)
       method_source
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
-    rake (13.0.1)
+    rake (12.3.3)
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    ruby-graphviz (1.2.4)
     ruby_dep (1.5.0)
     spring (2.1.0)
     spring-watcher-listen (2.0.1)
@@ -132,12 +172,19 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_model_serializers (~> 0.10.0)
+  annotate!
+  awesome_print
   bootsnap (>= 1.1.0)
   byebug
+  erd
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
+  pry-rails
+  pry-rescue
   puma (~> 3.11)
   rails (~> 5.2.3)
+  rails-i18n (~> 5.1)
   spring
   spring-watcher-listen (~> 2.0.0)
   tzinfo-data

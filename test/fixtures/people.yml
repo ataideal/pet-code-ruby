@@ -1,0 +1,23 @@
+# == Schema Information
+#
+# Table name: people
+#
+#  id         :bigint           not null, primary key
+#  name       :string
+#  identity   :string
+#  birthdate  :datetime
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  identity: MyString
+  birthdate: 2019-11-13 18:47:33
+
+two:
+  name: MyString
+  identity: MyString
+  birthdate: 2019-11-13 18:47:33
